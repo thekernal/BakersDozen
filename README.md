@@ -24,3 +24,4 @@ At the end of the three phases the number of edible baked goods is calculated. I
 Version Information 
 
 0.1 - Game Skeleton, Basic Build (zip, no minify),  400 of 13312 (3%)
+0.2 - Basic Menu Navigation, First Pass at Recipe names, 946 of 13312 (7%)

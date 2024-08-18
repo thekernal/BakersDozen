@@ -1,25 +1,88 @@
 <HTML>
     <!-- Version 0.1 -->
     <TITLE>Bakers Dozen</TITLE>
-    <DIV id="title">
+    <script>
+        function new_game(mode) {
+           var element = document.getElementById("title");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("game");
+           element.setAttribute("style", "display:block");
+           element = document.getElementById("stats");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("credits");
+           element.setAttribute("style", "display:none");
+        }
+
+        function stats() {
+           var element = document.getElementById("title");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("game");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("stats");
+           element.setAttribute("style", "display:block");
+           element = document.getElementById("credits");
+           element.setAttribute("style", "display:none");
+
+        }
+
+        function credits() {
+            var element = document.getElementById("title");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("game");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("stats");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("credits");
+           element.setAttribute("style", "display:block");
+
+        }
+
+        function menu() {
+            var element = document.getElementById("title");
+           element.setAttribute("style", "display:block");
+           element = document.getElementById("game");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("stats");
+           element.setAttribute("style", "display:none");
+           element = document.getElementById("credits");
+           element.setAttribute("style", "display:none");
+
+        }
+    </script>
+    <DIV id="title" style="display:block">
         <DIV><H1>Bakers Dozen</H1></DIV>
-        <DIV><H2>New Game - Normal Mode</H2></DIV>
-        <DIV><H2>New Game - Scratch Mode</H2></DIV>
-        <DIV><H2>New Game - Brutal Mode</H2></DIV>
-        <DIV><H2>Statistics</H2></DIV>
-        <DIV><H2>Credits</H2></DIV>
+        <DIV><button onclick="new_game(0)">Game - Normal Mode</button></DIV>
+        <DIV><button onclick="new_game(1)">Game - Zero Mode</button></DIV>
+        <DIV><button onclick="new_game(2)">Game - Brutal Mode</button></DIV>
+        <DIV><button onclick="stats()">Statistics</button></DIV>
+        <DIV><button onclick="credits()">Credits</button></DIV>
     </DIV>
-    <DIV id="game">
+    <DIV id="game" style="display:none">
         <DIV><H1>The Baking Zone</H1></DIV>
         <DIV>Recipes:</DIV>
+        <li>1 Basic Bread (<span id="b1"></span>)</li>
+        <li>2 Chewy Chocolate Chip Cookies (<span id="b2"></span>)</li>
+        <li>3 Creamy Cupcakes (<span id="b3"></span>)</li>
+        <li>4 Elevated Eclairs (<span id="b4"></span>)</li>
+        <li>5 Devisive Donuts (<span id="b5"></span>)</li>
+        <li>6 Fudgilicious Fudge (<span id="b6"></span>)</li>
+        <li>7 Suprisingly Sweet Tart (<span id="b7"></span>)</li>
+        <li>8 Comically Cheesy Cheesecake (<span id="b8"></span>)</li>
+        <li>9 Rolley Polley Cinnamon Roll (<span id="b9"></span>)</li>
+        <li>10 Barely Brown Banana Biscotti (<span id="b10"></span>)</li>
+        <li>11 Terribly Twisted Pretzel Puzzle (<span id="b11"></span>)</li>
+        <li>12 The Cylindrical Square (<span id="b12"></span>)</li>
+        <li>13 Dastardly Devil's Food Cake (<span id="b13"></span>)</li>
         <DIV>Prep Zone</DIV>
         <DIV>Oven</DIV>
         <DIV>Bake Time</DIV>
     </DIV>
-    <DIV id="stats">
+    <DIV id="stats" style="display:none">
+        <DIV><button onclick="menu()">Main Menu</button></DIV>
         <DIV></DIV>
     </DIV>
-    <DIV id="credits">
+    <DIV id="credits" style="display:none">
+        <DIv><BUTTON onclick="menu()">Main Menu</BUTTON></DIv>
         <DIV>Written By: Sir Kernal of Thirteendom, 13th earl codith, Keeper of the thirteen realms</DIV>
     </DIV>
 </HTML>
